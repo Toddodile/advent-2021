@@ -1,7 +1,7 @@
 using System;
 using System.IO;
 
-class TestClass
+class Pathing
 {
     static void Main(string[] args)
     {
