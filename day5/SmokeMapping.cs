@@ -16,9 +16,9 @@ namespace day5
                 string[] points = inputs[i].Split(" ", StringSplitOptions.RemoveEmptyEntries);
                 Point start = new Point(points[0]);
                 Point end = new Point(points[2]);
-                int high;
-                int low;
                 if (start.GetX() == end.GetX()) {
+                    int high;
+                    int low;   
                     if (start.GetY() > end.GetY()) {
                         high = start.GetY();
                         low = end.GetY();
@@ -34,22 +34,8 @@ namespace day5
                             smokeMap.Add(point, 1);
                         }
                     }
-                } else if (start.GetY() == end.GetY()) {
-                    if (start.GetX() > end.GetX()) {
-                        high = start.GetX();
-                        low = end.GetX();
-                    } else {
-                        high = end.GetX();
-                        low = start.GetX();
-                    }
-                    for (int j = low; j <= high; j++) {
-                        Point point = new Point(j, start.GetY());
-                        if (smokeMap.ContainsKey(point)) {
-                            smokeMap[point]++;
-                        } else {
-                            smokeMap.Add(point, 1);
-                        }
-                    }
+                } else {
+                    PopulateLine(start, end, ref smokeMap);
                 }
             }
             int heavilySmoked = 0;
@@ -59,6 +45,22 @@ namespace day5
                 }
             }
             Console.WriteLine("Heavily obscured points: {0}", heavilySmoked);
+        }
+
+        static void PopulateLine(Point p1, Point p2, ref Dictionary<Point, int> map) {
+            int slope = (p2.GetY() - p1.GetY()) / (p2.GetX() - p1.GetX());
+            int b = p1.GetY() - slope * p1.GetX();
+            int low = Math.Min(p1.GetX(), p2.GetX());
+            int high = Math.Max(p1.GetX(), p2.GetX());
+            for (int i = low; i <= high; i++) {
+                int y = slope * i + b;
+                Point point = new Point(i, slope * i + b);
+                if (map.ContainsKey(point)) {
+                    map[point]++;
+                } else {
+                    map.Add(point, 1);
+                }
+            }
         }
     }
 }
