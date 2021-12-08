@@ -1,3 +1,5 @@
+using System;
+
 namespace day5
 {
     class Point
@@ -8,6 +10,12 @@ namespace day5
         public Point(int x, int y) {
             this.x = x;
             this.y = y;
+        }
+
+        public Point(string position) {
+            string[] coordinates = position.Split(",");
+            x = Convert.ToInt32(coordinates[0]);
+            y = Convert.ToInt32(coordinates[1]);
         }
 
         public int GetX() {
@@ -31,6 +39,11 @@ namespace day5
 
         public bool Equals(Point obj) {
             return obj.GetX() == this.GetX() && obj.GetY() == this.GetY();
+        }
+
+        public override int GetHashCode()
+        {
+            return x.GetHashCode() ^ y.GetHashCode();
         }
     }
 }
