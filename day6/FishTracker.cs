@@ -14,7 +14,7 @@ class FishTracker
             population[Convert.ToInt64(initialPopulation[i])]++;
         }
 
-        for (int i = 0; i < 80; i++) {
+        for (int i = 0; i < 256; i++) {
             AdvanceDay(ref population);
         }
         long totalPopulation = 0;
