@@ -1,0 +1,15 @@
+/Users/todd/code/advent-2021/day7/obj/Debug/net5.0/day7.csproj.AssemblyReference.cache
+/Users/todd/code/advent-2021/day7/obj/Debug/net5.0/day7.GeneratedMSBuildEditorConfig.editorconfig
+/Users/todd/code/advent-2021/day7/obj/Debug/net5.0/day7.AssemblyInfoInputs.cache
+/Users/todd/code/advent-2021/day7/obj/Debug/net5.0/day7.AssemblyInfo.cs
+/Users/todd/code/advent-2021/day7/obj/Debug/net5.0/day7.csproj.CoreCompileInputs.cache
+/Users/todd/code/advent-2021/day7/bin/Debug/net5.0/day7.deps.json
+/Users/todd/code/advent-2021/day7/bin/Debug/net5.0/day7.runtimeconfig.json
+/Users/todd/code/advent-2021/day7/bin/Debug/net5.0/day7.runtimeconfig.dev.json
+/Users/todd/code/advent-2021/day7/bin/Debug/net5.0/day7.dll
+/Users/todd/code/advent-2021/day7/bin/Debug/net5.0/ref/day7.dll
+/Users/todd/code/advent-2021/day7/bin/Debug/net5.0/day7.pdb
+/Users/todd/code/advent-2021/day7/obj/Debug/net5.0/day7.dll
+/Users/todd/code/advent-2021/day7/obj/Debug/net5.0/ref/day7.dll
+/Users/todd/code/advent-2021/day7/obj/Debug/net5.0/day7.pdb
+/Users/todd/code/advent-2021/day7/obj/Debug/net5.0/day7.genruntimeconfig.cache
